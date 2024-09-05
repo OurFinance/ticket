@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the main container horizontally */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.icon-container {
+    position: absolute;
+    top: 20px;
+    left: 165px; /* Align the icon to the left */
+}
+
+.icon {
+    width: 25px;
+    height: auto;
+}
+
+main {
+    margin-top: 40px; /* Create space to avoid overlap with the icon */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.panel-section {
+    width: 100%;
+    max-width: 1200px;
+    border: 1px solid #000000;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative; /* Allow positioning of the form-actions container */
+}
+
+.panel-section h3 {
+    margin-top: 0;
+    text-align: left;
+	color: #00008B;
+	font-size: 28px;
+}
+
+.panel-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between left and right sections */
+}
+
+.panel-left, .panel-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form groups */
+    flex: 1; /* Make both sides take equal space */
+}
+
+.panel-left {
+    margin-right: 20px; /* Space between left and right sections */
+}
+
+/* Ensure consistency in form group styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Make sure form groups use full width */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+/* Ensuring all input fields are consistently sized */
+input[type="text"],
+input[type="datetime-local"],
+input[type="email"], /* Add email to the list */
+input[type="file"],
+select {
+    width: 100%; /* Ensure inputs and selects take up full width */
+    padding: 10px; /* Consistent padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    position: absolute; /* Position the form-actions container relative to the panel */
+    right: 130px; /* Adjust based on panel padding */
+	padding-bottom: 20px;
+}
+
+.submit-button,
+.reset-button {
+    background-color: #4CAF50; /* Green for submit button */
+    color: white;
+    border: none;
+    padding: 10px; /* Adjust padding for consistent height */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 180px; /* Set a fixed width */
+}
+
+.reset-button {
+    background-color: #f44336; /* Red for reset button */
+}
+
